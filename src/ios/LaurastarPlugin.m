@@ -1,4 +1,5 @@
 #import "LaurastarPlugin.h"
+#import <Cordova/CDV.h>
 
 @implementation LaurastarPlugin
 
@@ -9,19 +10,23 @@
     //id arg = [command.arguments objectAtIndex:0];
     BOOL arg = YES;
     
-    CDVPluginResult* result;
+    CDVPluginResult* pluginResult;
  
     if (arg)
     {
         // Success Callback
-        result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"Hello from Laurastar Plugin!"];
-        [self writeJavascript:[result toSuccessCallbackString:command.callbackId]];
+        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"Hello from Laurastar Plugin!"];
+        // deprecated 
+        // [self writeJavascript:[result toSuccessCallbackString:command.callbackId]];
+        [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
     }
     else
     {
         // Error Callback
-        result = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR];
-        [self writeJavascript:[result toErrorCallbackString:command.callbackId]];
+        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR];
+        // deprecated 
+        // [self writeJavascript:[result toErrorCallbackString:command.callbackId]];
+        [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
     }
 
 }
