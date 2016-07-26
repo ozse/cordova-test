@@ -10,18 +10,18 @@
     <engines>
         <engine name="cordova" version=">=3.5.0" />
     </engines>
-    <js-module src="www/hello_world.js" name="helloworld">
-        <clobbers target="HelloWorld" />
+    <js-module src="www/LaurastarPlugin.js" name="LaurastarPlugin">
+        <clobbers target="LaurastarPlugin" />
     </js-module>
 
     <platform name="ios">
         <config-file target="config.xml" parent="/*">
-            <feature name="HelloWorldPlugin">
-                <param name="ios-package" value="HelloWorldPlugin"/>
+            <feature name="LaurastarPlugin">
+                <param name="ios-package" value="LaurastarPlugin"/>
             </feature>
     </config-file>
-    <header-file src="src/ios/HelloWorldPlugin.h" target-dir="src/ios" />
-        <source-file src="src/ios/HelloWorldPlugin.m" target-dir="src/ios" />
+    <header-file src="src/ios/LaurastarPlugin.h" target-dir="src/ios" />
+        <source-file src="src/ios/LaurastarPlugin.m" target-dir="src/ios" />
     </platform>
  
 
