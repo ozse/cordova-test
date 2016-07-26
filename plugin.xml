@@ -18,6 +18,7 @@
         <config-file target="config.xml" parent="/*">
             <feature name="LaurastarPlugin">
                 <param name="ios-package" value="LaurastarPlugin"/>
+                <param name="onload" value="true" />
             </feature>
     </config-file>
     <header-file src="src/ios/LaurastarPlugin.h" target-dir="src/ios" />
