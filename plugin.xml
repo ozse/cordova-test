@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+  id="ch.details.laurastar"
+  version="0.0.1">
+
+    <name>Laurstar - Plugin</name>
+    <description>Laurastar plugin cordova</description>
+    <author>zos / details sa</author>
+    <license>Apache 2.0 License</license>
+    <engines>
+        <engine name="cordova" version=">=3.5.0" />
+    </engines>
+    <js-module src="www/hello_world.js" name="helloworld">
+        <clobbers target="HelloWorld" />
+    </js-module>
+
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="HelloWorldPlugin">
+                <param name="ios-package" value="HelloWorldPlugin"/>
+            </feature>
+    </config-file>
+    <header-file src="src/ios/HelloWorldPlugin.h" target-dir="src/ios" />
+        <source-file src="src/ios/HelloWorldPlugin.m" target-dir="src/ios" />
+    </platform>
+ 
+
+</plugin>

@@ -1,0 +1,27 @@
+{
+  "name": "Laurstar - Plugin",
+  "version": "0.0.1",
+  "description": "Laurastar plugin cordova",
+  "cordova": {
+    "id": "ch.details.laurastar",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ozse/cordova-test.git"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-ios"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.5.0"
+    }
+  ],
+  "author": "zos",
+  "license": "Apache 2.0 License"
+}
