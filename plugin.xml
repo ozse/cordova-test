@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
   id="ch.details.laurastar"
-  version="0.0.21">
+  version="0.0.3">
 
     <name>Laurstar - Plugin</name>
     <description>Laurastar plugin cordova</description>
