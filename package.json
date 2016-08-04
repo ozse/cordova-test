@@ -1,6 +1,6 @@
 {
   "name": "Laurstar - Plugin",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Laurastar plugin cordova",
   "cordova": {
     "id": "ch.details.laurastar",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ozse/cordova-test.git"
+    "url": "http://gitlab.details.ch/seb/cordova-details-plugin.git"
   },
   "keywords": [
     "ecosystem:cordova",

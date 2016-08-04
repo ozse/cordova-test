@@ -1,1 +1,1 @@
-# cordova-test
+# cordova plugin for Laurstar Project
