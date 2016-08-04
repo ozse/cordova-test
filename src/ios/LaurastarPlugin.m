@@ -6,7 +6,6 @@
 
 @implementation LaurastarPlugin
 
-
 #pragma mark - METHODS -
 - (CDVPluginResult *) disconnect
 {
@@ -47,6 +46,16 @@
 
 
 #pragma mark - INTERFACE -
+
+#pragma mark PLUGIN
+- (void) iron_pluginAvailable:(CDVInvokedUrlCommand*)command
+{
+    [self.commandDelegate runInBackground:^{
+        CDVPluginResult *pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"yes"];
+        [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+    }];
+}
+
 #pragma mark DISCONNECT
 - (void) iron_disconnect:(CDVInvokedUrlCommand*)command
 {
@@ -167,6 +176,45 @@
         }
     }];
 
+}
+#pragma mark Machine
+- (void) iron_refreshMachine:(CDVInvokedUrlCommand*)command
+{
+}
+
+#pragma mark Counters
+- (void) iron_refreshCounters:(CDVInvokedUrlCommand*)command
+{
+}
+
+#pragma mark Machine States
+- (void) iron_refreshMachineStates:(CDVInvokedUrlCommand*)command
+{
+}
+
+#pragma mark Fan level
+- (void) iron_incrementFanLevel:(CDVInvokedUrlCommand*)command
+{
+}
+
+#pragma mark Steam state
+- (void) iron_changeSteamState:(CDVInvokedUrlCommand*)command
+{
+}
+
+#pragma mark Filter
+- (void) iron_resetFilter:(CDVInvokedUrlCommand*)command
+{
+}
+
+#pragma mark Cover
+- (void) iron_resetCover:(CDVInvokedUrlCommand*)command
+{
+}
+
+#pragma mark Rinse
+- (void) iron_resetRinse:(CDVInvokedUrlCommand*)command
+{
 }
 
 @end
